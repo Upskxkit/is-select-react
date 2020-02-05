@@ -1,0 +1,26 @@
+.checkboxRoot {
+  padding: 4px !important;
+  margin-left: -11px;
+}
+
+.labelRoot {
+  width: 100%;
+  margin: 0 !important;
+  max-height: 28px;
+
+  &:hover {
+    background-color: #f3f9ff;
+  }
+}
+
+.text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popperWrapper {
+  top: 100%;
+  width: inherit;
+  z-index: 1;
+}

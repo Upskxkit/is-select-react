@@ -1,0 +1,61 @@
+{
+  "name": "is-select-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "jsnext:main": "build/index.es.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "build:prod": "rollup -c --environment NODE_ENV:production",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@material-ui/core": "^4.9.1",
+    "@material-ui/icons": "^4.9.1",
+    "@svgr/rollup": "^5.1.0",
+    "@types/jest": "^24.9.0",
+    "@types/prop-types": "^15.7.3",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-test-renderer": "^16.9.2",
+    "@types/shortid": "0.0.29",
+    "jest": "^24.9.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts-ts": "^3.1.0",
+    "react-test-renderer": "^16.12.0",
+    "react-tiny-virtual-list": "^2.2.0",
+    "rollup": "^1.31.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^2.0.6",
+    "rollup-plugin-scss": "^2.1.0",
+    "rollup-plugin-svg": "^2.0.0",
+    "rollup-plugin-svgo": "^1.1.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-url": "^3.0.1",
+    "shortid": "^2.2.15",
+    "ts-jest": "^25.1.0",
+    "typescript": "^3.7.5"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "@material-ui/core": "^4.9.1"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "files": [
+    "build",
+    "**.*/*.{svg,d.ts}"
+  ]
+}

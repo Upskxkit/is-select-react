@@ -1,0 +1,21 @@
+@mixin base-text-style {
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@mixin base-text-style {
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+@mixin font-family-tiempost{
+  font-family: "TiemposText", serif;
+}
+
+@mixin font-family-helvetica{
+  font-family: "HelveticaNeue", serif;
+}
