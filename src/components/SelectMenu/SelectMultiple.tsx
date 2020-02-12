@@ -5,12 +5,13 @@ import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import "./SelectMenu.scss"
 import Typography from "@material-ui/core/Typography";
-import CheckBoxOutlineBlankOutlinedIcon from '@material-ui/icons/CheckBoxOutlineBlankOutlined';
-import CheckBoxOutlinedIcon from '@material-ui/icons/CheckBoxOutlined';
-import IndeterminateCheckBoxOutlinedIcon from '@material-ui/icons/IndeterminateCheckBoxOutlined';
 import {propTypes} from "./propTypes";
 import VirtualList from "react-tiny-virtual-list";
 import {Item, MultipleMenu} from "../../interface";
+
+import {ReactComponent as CheckedIcon} from "../../svg/checked.svg";
+import {ReactComponent as UncheckedIcon} from "../../svg/unchecked.svg";
+import {ReactComponent as IndeterminateIcon} from "../../svg/indeterminate.svg";
 
 function SelectMultiple({cancelHandler, applyHandler, items, open}: MultipleMenu): ReactElement {
   const [list, setList] = useState<Item[]>([]);
@@ -74,9 +75,9 @@ function SelectMultiple({cancelHandler, applyHandler, items, open}: MultipleMenu
             checked={allState.checked}
             indeterminate={allState.indeterminate}
             onChange={handleChangeAll}
-            checkedIcon={<CheckBoxOutlinedIcon fontSize="small"/>}
-            indeterminateIcon={<IndeterminateCheckBoxOutlinedIcon fontSize="small"/>}
-            icon={<CheckBoxOutlineBlankOutlinedIcon fontSize="small"/>}
+            checkedIcon={<CheckedIcon/>}
+            indeterminateIcon={<IndeterminateIcon/>}
+            icon={<UncheckedIcon/>}
             value={allState.value}
           />}
           label={<Typography noWrap className="text" variant="body2">{allState.label}</Typography>}
@@ -96,8 +97,8 @@ function SelectMultiple({cancelHandler, applyHandler, items, open}: MultipleMenu
               control={<Checkbox checked={item.checked}
                                  classes={{root: "checkboxRoot"}}
                                  onChange={handleChange}
-                                 checkedIcon={<CheckBoxOutlinedIcon fontSize="small"/>}
-                                 icon={<CheckBoxOutlineBlankOutlinedIcon fontSize="small"/>}
+                                 checkedIcon={<CheckedIcon/>}
+                                 icon={<UncheckedIcon/>}
                                  value={item.id}/>}
               label={<Typography noWrap className="text" variant="body2">{item.label}</Typography>}
             />)
